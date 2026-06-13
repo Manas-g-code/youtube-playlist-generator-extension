@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>YT Playlist Generator</title>
+    <link rel="stylesheet" href="popup.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="app">
+
+        <header>
+            <h1>PLAYTEU</h1>
+            <p>Generate playlists from your YT history</p>
+        </header>
+
+        <div class="card">
+
+            <label>Total Scrolls</label>
+            <input id="scrollCount" type="number" min="1" max="100" placeholder="10" />
+
+            <label>Filters</label>
+            <textarea id="filters" placeholder="Add Filters"></textarea>
+
+            <label>Playlist Name</label>
+            <input id="playlistName" placeholder="Enter Playlist Name" />
+
+            <div class="buttons">
+                <button id="scan" class="primary">Scan History</button>
+                <button id="stop" class="secondary">Stop</button>
+            </div>
+
+        </div>
+
+        <div class="card stats">
+
+            <div class="stat">
+                <span>Total Videos</span>
+                <strong id="totalVideos">0</strong>
+            </div>
+
+            <div class="stat">
+                <span>Filtered videos</span>
+                <strong id="filteredVideos">0</strong>
+            </div>
+
+        </div>
+
+        <footer>
+            Developed by <b>Mav</b>
+        </footer>
+
+        <div id="toast"></div>
+
+        <script src="popup.js"></script>
+
+    </div>
+
+</body>
+
+</html>
